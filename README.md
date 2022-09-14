@@ -2,7 +2,7 @@
 Template for cmake c++ projects.
 
 ## Installation:
-Requires Conan and CMake. 
+Requires [Conan](https://conan.io/center/) and CMake. 
 They can be installed by:
 ```shell
 pip install conan
@@ -37,7 +37,7 @@ cd <build folder>
 
 ## Usage: 
 
-* Add external dependencies via conan package manager
+* Add external dependencies via [conan package manager](https://conan.io/center/)
 * All unit tests must be in tests folder
 * All benchmarks must be in benchmarks folder
 * All headers must be in include folder
