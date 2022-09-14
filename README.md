@@ -2,7 +2,12 @@
 Template for cmake c++ projects.
 
 ## Installation:
-
+Requires Conan and CMake. 
+They can be installed by:
+```shell
+pip install conan
+pip install cmake
+```
 ### Build your app in debug mode:
 
 ```shell
