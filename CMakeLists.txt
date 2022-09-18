@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(TEMPLATE VERSION 0.1 LANGUAGES CXX)
+project(TEMPLATE VERSION 0.1 LANGUAGES CXX) # change project name here
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -34,9 +34,10 @@ add_library(
     src/adder/adder.cpp
 )
 
-add_executable(${PROJECT_NAME} src/main.cpp)
 
+add_executable(${PROJECT_NAME} src/main.cpp)
 target_link_libraries(${PROJECT_NAME} APPLICATION)
+
 
 get_directory_property(IS_SUBPROJECT PARENT_DIRECTORY)
 option(ENABLE_TESTING "Enable testing" ON)
