@@ -14,32 +14,32 @@ pip install cmake
 mkdir cmake-build-debug
 cd cmake-build-debug
 conan install .. --build=missing
-cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTING=ON -DENABLE_BENCHMARKS=ON ..
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake..
 cmake --build .  
 ```
 
 ### Build your app in release mode:
 
+By yourself: 
 ```shell
 mkdir cmake-build-release
 cd cmake-build-release
 conan install .. --build=missing
-cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_TESTING=OFF -DENABLE_BENCHMARKS=OFF ..
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake ..
 cmake --build .  
 ```
 
-### Run template:
+Or by running Makefile
 
-```shell
-cd <build folder>
-./TEMPLATE <program_options>
-```
+* ```make run-app```  - run app in release mode
+* ```make build-debug```  - build app in debug mode
+* ```make build-release```  - build app in release mode
+* ```make install-dependencies```  - run conan and install all dependencies
+
 
 ## Usage: 
 
 * Add external dependencies via [conan package manager](https://conan.io/center/)
-* All unit tests must be in tests folder
-* All benchmarks must be in benchmarks folder
-* All headers must be in include folder
-* All sources must be in src folder
+* all sources placed in ```<template>``` folder
+
 
